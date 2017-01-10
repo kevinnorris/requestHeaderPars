@@ -2,7 +2,7 @@ var express = require("express");
 var path = require("path");
 var app = express();
 
-app.get("/", function(req, res){
+app.get("/*", function(req, res){
     var ip = req.headers['x-forwarded-for'],
         lang = req.headers["accept-language"],
         userAgent = req.headers["user-agent"];
