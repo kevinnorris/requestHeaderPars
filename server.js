@@ -3,7 +3,6 @@ var path = require("path");
 var app = express();
 
 app.get("/", function(req, res){
-    console.log(JSON.stringify(req.headers));
     var ip = req.headers['x-forwarded-for'],
         lang = req.headers["accept-language"],
         userAgent = req.headers["user-agent"];
